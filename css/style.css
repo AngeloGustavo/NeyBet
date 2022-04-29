@@ -1,9 +1,35 @@
 body {
   background-color: #072356;
 }
-h1 {
-  color: blue;
+h3 {
+  color: white;
 }
 p {
-  color: red;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  padding: 50px;
+  content: "";
+  clear: both;
+  display: table;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #B8000C;
+   color: white;
+   text-align: center;
 }
