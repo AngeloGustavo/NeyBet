@@ -1,0 +1,396 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./FUNDO-NOVO.png);
+}
+
+.pai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraSuperior {
+    width: 100%;
+    height: 50px;
+    background-color: #B8000C;
+    margin: 0% 0px 0px 0px;
+    padding: 10px 0px 20px 0px;
+}
+
+.boasVindas {
+    width: 50%;
+    background-color: rgb(238, 181, 181);
+    border-radius: 15px;
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+    border: #ff7003 4px solid;
+}
+
+.div-mae {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    margin-top: 15px;
+}
+
+.filho1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0%;
+    padding-right: 0%;
+    background-color: #63636d;
+    border-radius: 10px;
+    border: 3px solid #B8000C;
+    padding: 5px;
+}
+
+/**** div com as regras do jogo ****/
+.regras {
+    background-color: #d2d2d2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    height: auto;
+    border-radius: 10px;
+    border: 6px double #31ae15;
+    color: rgb(0, 0, 0);
+    margin: 20px 15px 10px 15px;
+    padding: 25px;
+    font-weight: bolder;
+}        
+
+.regras > h1 {
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.bolasParaEscolher {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.linha-um {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
+    margin: 15px 15px 5px 15px;
+    border-radius: 70px;
+    border: #4b207f 3px solid;
+    padding: 10px;
+    width: 36px;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: #B8000C;
+    /*background-color: #197c1b;*/
+    background-color: #c7c5c5;
+    color: black;
+    box-shadow: 2px 2px 2px #4b207f;
+}
+
+.linha-um > .be1:hover, .linha-um > .be2:hover, .linha-um > .be3:hover, .linha-um > .be4:hover, .linha-um > .be5:hover, .linha-um > .be6:hover, .linha-um > .be7:hover, .linha-um > .be8:hover, .linha-um > .be9:hover, .linha-um > .be10:hover, .linha-um > .be11:hover, .linha-um > .be12:hover, .linha-um > .be13:hover, .linha-um > .be14:hover, .linha-um > .be15:hover, .linha-um > .be16:hover, .linha-um > .be17:hover, .linha-um > .be18:hover, .linha-um > .be19:hover, .linha-um > .be20:hover, .linha-um > .be21:hover, .linha-um > .be22:hover, .linha-um > .be23:hover, .linha-um > .be24:hover, .linha-um > .be25:hover, .linha-um > .be26:hover, .linha-um > .be27:hover, .linha-um > .be28:hover, .linha-um > .be29:hover, .linha-um > .be30:hover, .linha-um > .be31:hover, .linha-um > .be32:hover, .linha-um > .be33:hover, .linha-um > .be34:hover, .linha-um > .be35:hover, .linha-um > .be36:hover, .linha-um > .be37:hover, .linha-um > .be38:hover, .linha-um > .be39:hover, .linha-um > .be40:hover, .linha-um > .be41:hover, .linha-um > .be42:hover, .linha-um > .be43:hover, .linha-um > .be44:hover, .linha-um > .be45:hover, .linha-um > .be46:hover, .linha-um > .be47:hover, .linha-um > .be48:hover, .linha-um > .be49:hover, .linha-um > .be50:hover {
+    background-color: rgb(230, 224, 40);
+}
+
+/* div responsavel sobre valor de aposta*/
+.valorDeAposta {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content:flex-start;
+    align-items:flex-start
+}
+
+.valorAposta {
+    padding: 15px;
+    border-radius: 10px;
+    border: solid 4px rgb(32, 154, 10);
+    width: 280px;
+    font-weight: bolder;
+    font-size: 15px;
+    color: black;
+}
+
+.divisoria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* mostra a quantidadade de bolas que o jogador esta escolhendo*/
+
+.avisoQtdBolas {
+    width: 180px;
+    background-color: rgb(252, 254, 255);
+    padding: 2px;
+    border-radius: 10px;
+    border: 4px rgb(21, 138, 1) dashed;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.QtdBolas {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.titulo {
+    background-color: #b0b7bb;
+    border-radius: 6px;
+}
+
+/* mostra se ja alcançou o numero maximo de bolas*/
+
+.MsgBolas {
+    display: none;
+    margin-top: 5px;
+    border: #B8000C 3px solid;
+    padding: 6px;
+    background-color: rgb(246, 241, 233);
+    border-radius: 8px;
+    width: 150px;
+    margin-left: 8px;
+    margin-top: 20px;
+}
+
+/**** botao para enviar os dados ****/
+.botao {
+    background-color: darkgreen;
+    width: 160px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.botao:hover {
+    background-color: #5acd0e;
+}
+
+
+/***** area responsavel pelo jogo *****/
+
+
+
+/*banner que informa qual a rodada atual*/
+.sort {
+    width: 80%;
+}
+
+#bannerDeRodada {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(192, 196, 223);
+    color: black;
+    margin-top: 20px;
+    border: #2a15b0 solid 4px;
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/************ primeira ancora ***********/
+html {
+    scroll-behavior: smooth;
+}
+
+/*div que guarda as bolas sorteadas*/
+.bolasSorteadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #19191a;
+    color: rgb(8, 7, 7);
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.armazenaBolasSorteadas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    border: rgb(44, 28, 223) solid 4px;
+    border-radius: 10px;
+    margin: 10px 0px 20px 0px;
+    background-color: #c1c3ce;
+}
+
+/*bolas acertadas*/
+
+.bolasAcertadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #19191a;
+    color: rgb(8, 7, 7);
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+#bannerAcertadas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(224, 233, 219);
+    color: black;
+    margin-top: 20px;
+    border: #4acb0a solid 4px;
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.armazenaBolasAcertadas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    border: #4acb0a solid 3px;
+    border-radius: 10px;
+    margin: 10px 0px 20px 0px;
+    background-color: rgb(224, 233, 219);
+    padding: 0px 30px 0px 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container > .bs1, .container > .bs2, .container > .bs3, .container > .bs4, .container > .bs5, .container > .bs6, .container > .bs7, .container > .bs8, .container > .bs9, .container > .bs10, .container > .bs11, .container > .bs12, .container > .bs13, .container > .bs14, .container > .bs15, .container > .bs16, .container > .bs17, .container > .bs18, .container > .bs19, .container > .bs20 {
+    margin: 20px;
+    border-radius: 70px;
+    border: #1179c3 3px solid;
+    box-shadow: 2px 2px 2px #1179c3 ;
+    padding: 10px;
+    width: 26px;
+    background-color: rgb(198, 203, 199);
+}
+
+.bs1 > p, .bs2 > p, .bs3 > p, .bs4 > p, .bs5 > p, .bs6 > p, .bs7 > p, .bs8 > p, .bs9 > p, .bs10 > p, .bs11 > p, .bs12 > p, .bs13 > p, .bs14 > p, .bs15 > p, .bs16 > p, .bs17 > p, .bs18 > p, .bs19 > p, .bs20 > p {
+    font-weight: bolder;
+    color: rgb(0, 8, 0);
+    font-size: 20px;
+}
+
+.container > .bs1a, .container > .bs2a, .container > .bs3a, .container > .bs4a, .container > .bs5a, .container > .bs6a, .container > .bs7a, .container > .bs8a, .container > .bs9a, .container > .bs10a, .container > .bs11a, .container > .bs12a, .container > .bs13a, .container > .bs14a, .container > .bs15a, .container > .bs16a, .container > .bs17a, .container > .bs18a, .container > .bs19a, .container > .bs20a {
+    margin: 20px;
+    border-radius: 70px;
+    border: #1d8421 3px solid;
+    box-shadow: 2px 2px 2px #1d8421 ;
+    padding: 10px;
+    width: 26px;
+    background-color: rgb(198, 203, 199);
+}
+
+.bs1a > p, .bs2a > p, .bs3a > p, .bs4a > p, .bs5a > p, .bs6a > p, .bs7a > p, .bs8a > p, .bs9a > p, .bs10a > p, .bs11a > p, .bs12a > p {
+    font-weight: bolder;
+    color: rgb(143, 7, 7);
+    font-size: 20px;
+}
+
+
+
+
+/****** corresponde aos resultados ******/
+
+/** botao resultado **/
+.botaoResultado {
+    background-color: darkgreen;
+    padding: 15px;
+    border: white 1px solid;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    margin-top: 20px;
+}
+
+.botaoResultado:hover {
+    background-color: #5acd0e;
+}
+
+
+/******* informações de resultado ********/
+
+.banner-resultado {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    
+    background-color: #63636d;
+    color: black;
+    margin-top: 20px;
+    border: #B8000C solid 2px;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.result {
+    background-color: #B8000C;
+    color: #ffff;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.dinheiroApostado, .numerosApostado, .valorRecebidoRodada, .retornoFinal, .BolasOk {
+    width: 800px;
+    background-color: #29292a;
+    border-radius: 7px;
+    border: #29292a 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+.dinheiroApostado > p, .numerosApostado > p, .valorRecebidoRodada > p, .retornoFinal > p, .BolasOk > p {
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
