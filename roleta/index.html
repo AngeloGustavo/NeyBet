@@ -1,4 +1,17 @@
-<?php include('comum/header.html'); ?>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<link rel="stylesheet" href="../css/button.css">
+
+	<title>NeyBet</title>
+	
+</head>
+<body>
+
+<script src="../js/navbarUpDir.js"></script>
 
 <!-- MUDAR TUDO PRA ORIENTADA A OBJETOS !!!!!!!!!!!!!!!!!!!!! -->
 
@@ -6,7 +19,7 @@
     <label id="demo" for="radioBranco"></label>
 </div>
 
-<form onsubmit="play();return false;" method="post" name="myForm" id="myForm">
+<form onsubmit="play(); return false;" method="post" name="myForm" id="myForm">
     <input type="number" name="name" id="name" required="required"/>
     <input type="submit" name="submit">
 </form>
@@ -78,4 +91,9 @@ function play(){
 
 </script>
 
-<?php include('comum/footer.html'); ?>
+<div class="footer">
+    <p>NeyBet, sua casa de apostas!</p>
+</div>
+
+</body>
+</html>
