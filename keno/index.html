@@ -12,13 +12,13 @@
 <body class="pai" onload="QuatidadeNumerosSelecionados(0, 0)">
 
     <div class="barraSuperior">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sapiente</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
     </div>
 
     <div class="boasVindas">
         <h1>Bem vindo ao Keno</h1>
     </div>
-
+       
     <div class="div-mae">
         
         <div class="filho1">
@@ -100,36 +100,41 @@
             </div>
             
             <div class="divisoria">
-                <div class="MsgBolas" id="MsgBolasMax">
-                    <p class="MsgBolasMax">Número máximo de bolas escolhido.</p>
-                    
-                </div>
-
-                <div class="avisoQtdBolas">
-                    <div class="titulo"><h4>Número Bolas Escolhidas</h4></div>
-                    <p class="QtdBolas" id="QtdBolasEsc"></p>
-                </div>
-
-                <div class="valorDeAposta">
-                    <form action="get" id="formulario">
-                        <input type="number" name="valorAposta" id="valorAposta" placeholder="Valor minímo aposta R$: 1,00" class="valorAposta">
-                    </form>
-                </div>
+                <div class="infoBolas">
+                    <div class="MsgBolas" id="MsgBolasMax">
+                        <p class="MsgBolasMax">Número máximo de bolas escolhido.<p>
+                    </div>
     
-                <div class="botaoDados">
-                    <a href="#ancoraUm"><button type="submit" class="botao" id="btnEnvioDados" onclick="validarDados()">Enviar dados</button></a>
+                    <div class="avisoQtdBolas">
+                        <div class="titulo"><h4>Número Bolas Escolhidas</h4></div>
+                        <p class="QtdBolas" id="QtdBolasEsc"></p>
+                    </div>
                 </div>
+
+                
+                <div class="infoValor">
+                    <div class="valorDeAposta">
+                        <form action="get" id="formulario">
+                            <input type="number" name="valorAposta" id="valorAposta" placeholder="Valor minímo aposta R$: 1,00" class="valorAposta">
+                        </form>
+                    </div>
+        
+                    <div class="botaoDados">
+                        <a href="#ancoraUm"><button type="submit" class="botao" id="btnEnvioDados" onclick="validarDados()">Enviar dados</button></a>
+                    </div>
+                </div>
+                
             </div>
             
         </div>
  
     </div>
-
+ 
     <div class="sort" id="ancoraUm">
         <div id="bannerDeRodada">
             <h1 id="informaRodadaAtual">Bolas Sorteadas</h1>
         </div>
-
+        
         <div class="bolasSorteadas">
             
             <div class="armazenaBolasSorteadas">
@@ -163,11 +168,11 @@
             </div>
 
         </div>
-
+     
         <div id="bannerAcertadas">
-            <h1>Bolas Acertadas</h1>
+            <h1 id="vitoria">Bolas Acertadas</h1>
         </div>
-            
+              
         <div class="bolasAcertadas">
 
             <div class="armazenaBolasAcertadas">
@@ -186,13 +191,13 @@
                     <div class="bs12a"> <p id="a12-r1"></p> </div>
                 </div>
             </div>
-
+            
             <div class="btn">
                 <a href="#ancoraDois"><button onclick="preencheInterface()" class="botaoResultado">Mostrar Resultado</button></a>
             </div>
 
         </div>
-
+       
     </div>  
 
     <div class="banner-resultado" id="ancoraDois">
@@ -225,6 +230,7 @@
             <p id="acertoBall"></p>
         </div>
     </div>
+    
 </body>
 </html>
 
