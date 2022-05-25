@@ -5,7 +5,8 @@ body {
     /*background-image: url(./FUNDO-NOVO.png);*/
     /*background-image: url(./Sem\ título1.png);*/
     background-color: #19191a;
-    /*background-color: #109715;*/
+    
+    /*background-color: #f3be6f;*/
 }
 
 .pai {
@@ -96,6 +97,13 @@ body {
     align-content: center;
     justify-content: center;
 
+}
+
+
+.bolaSort {
+    background-color: #f3be6f;
+    border-radius: 70px;
+    padding: 10px;
 }
 
 .linha-um {
