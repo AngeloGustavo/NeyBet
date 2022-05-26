@@ -11,10 +11,11 @@ function bolasEscolhidas(x) {
     preencheBolasEscolhidas(x);
 }
 
+var quantidadeNumSelecionados = 0;
 // função que preenche vetor com numeros escolhidos pelo jogador
 function preencheBolasEscolhidas(numeroEscolhidoJogador) {
-    var contadora = 0, posicaoVetor = vetorEx.length, quantidadeNumSelecionados = 0;
-    
+    var contadora = 0, posicaoVetor = vetorEx.length;
+
     if(vetorEx.length >= 1) {
         for(var i = 0; i < posicaoVetor; i++) {
             if(vetorEx[i] == numeroEscolhidoJogador) { //jogador quer mudar número escolhido
@@ -294,7 +295,7 @@ function mudaCordeFundo(numero, gatilho) {
             } else { container.style.backgroundColor = '#d2d2d2';}
             break;
         default:
-            text = "Cor não mudada.";
+            text = "Looking forward to the Weekend";
     }
 }
 
@@ -320,17 +321,18 @@ var contadora = 0;
 // esta selecionando, direto na interface
 function QuatidadeNumerosSelecionados(quantidadeNumSelec, gatilho) {
     
-    if(gatilho == 0) { //iniciou o jogo
+    /*if(gatilho == 0) { //iniciou o jogo
         document.getElementById("QtdBolasEsc").innerHTML = 0;
     } else {
         document.getElementById("QtdBolasEsc").innerHTML = quantidadeNumSelec;
-    }
+    }*/
 
-    if(quantidadeNumSelec >= 12) {
-        document.getElementById("MsgBolasMax").style.display= 'flex';  
-    } else {
+    if(quantidadeNumSelec == 12) {
+        alert("Você atingiu o máximo de bolas!");
+        //document.getElementById("MsgBolasMax").style.display= 'flex';  
+    } /*else {
         document.getElementById("MsgBolasMax").style.display= 'none';
-    }
+    }*/
     
 }
 
@@ -342,7 +344,9 @@ function validarDados() {
     aposta = recebeValorApostadoJ;
     if(recebeValorApostadoJ >= 1 && validaNumerosEscolhidos() >= 1 && validaNumerosEscolhidos() <= 12) {
         alert("Aposta lida com sucesso! \nVocê apostará $:" + recebeValorApostadoJ + "." + "\nSua aposta tem " + validaNumerosEscolhidos() + " números, eles são " + ordenaNumeros(vetorNumerosApostados) + "\nClique em 'OK' para iniciar o jogo");
+        //preencheBolasSorteadaRodadaUm();
         setTimeout(preencheBolasSorteadaRodadaUm, 2000);
+        //setTimeout(preencheBolasAcertadasRodadaUm, 2000);
 
     } else {
         alert("Número máximo de bolas é 12 e valor minimo de aposta é R$: 1,00.");
@@ -387,7 +391,6 @@ function sorteiaBolas() {
 }
 
 // função que chama funções de ordenação e sorteio para
-// organizar as bolas sorteadas
 function preencheBolasSorteadaRodadaUm() {
     var listaNumerosSorteados = [];
     listaNumerosSorteados = sorteiaBolas();
@@ -399,7 +402,7 @@ function preencheBolasSorteadaRodadaUm() {
 function comparaBolas(listaNumerosSorteados) {
     var numerosAcertados = [], vetorteste = [];
 
-    var x = 0;
+    var x = 0, y = 0;
     for(var i=0; i<vetorNumerosApostados.length; i++){
         for(var j=0; j<listaNumerosSorteados.length; j++) {
             if(listaNumerosSorteados[j] == vetorNumerosApostados[i]) {
@@ -647,7 +650,6 @@ function preencheBolasSort(numSort, numAc) {
     });
   
     for(var i = 0; i < vetorDiferenca.length; i++) {
-        document.getElementById("idteste").innerHTML = typeof(vetorDiferenca);
         switch (vetorDiferenca[i]) {
             case 1: 
                 var container = document.getElementById("bola1");
