@@ -3,8 +3,10 @@ body {
     padding: 0%;
 
     /*background-image: url(./FUNDO-NOVO.png);*/
-    background-image: url(./Sem\ título1.png);
-    /*background-color: #19191a;*/
+    /*background-image: url(./Sem\ título1.png);*/
+    background-color: #19191a;
+    
+    /*background-color: #f3be6f;*/
 }
 
 .pai {
@@ -31,45 +33,46 @@ body {
     border: #ff7003 4px solid;
 }
 
+.boasVindas > h1 {
+    font-size: 26px;
+}
+
 .div-mae {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     align-content: center;
+    align-items: center;
+    justify-content: center;
     margin-top: 15px;
+    width: 90%;
 }
 
 .filho1 {
-    width: 100%;
+    width: 46%;
     height: auto;
-    margin-bottom: 0%;
-    padding-right: 0%;
     background-color: #63636d;
     border-radius: 10px;
     border: 3px solid #B8000C;
-    padding: 5px;
+    padding: 4px;
+    margin-right: 15px;
 }
-
-/**** div com as regras do jogo ****/
-.regras {
-    background-color: #d2d2d2;
+/*
+.filho2 {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-content: center;
+    align-items: center;
+    width: 20%;
     height: auto;
+    background-color: #63636d;
     border-radius: 10px;
-    border: 6px double #31ae15;
-    color: rgb(0, 0, 0);
-    margin: 20px 15px 10px 15px;
-    padding: 25px;
-    font-weight: bolder;
-}        
+    border: 2px solid #B8000C;
+    padding: 5px;
+}*/
 
-.regras > h1 {
-    font-weight: bolder;
-    font-size: 35px;
-}
+/**** div com as regras do jogo ****/
 
 .bolasParaEscolher {
     display: flex;
@@ -77,6 +80,29 @@ body {
     text-align: center;
     align-content: center;
     align-items: center;
+}
+
+.divisoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.infoValor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.bolaSort {
+    background-color: #f3be6f;
+    border-radius: 70px;
+    padding: 10px;
 }
 
 .linha-um {
@@ -88,13 +114,13 @@ body {
 }
 
 .linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
-    margin: 15px 15px 5px 15px;
+    margin: 15px 8px 5px 8px;
     border-radius: 70px;
     border: #4b207f 3px solid;
-    padding: 10px;
-    width: 36px;
+    padding: 4px;
+    width: 40px;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #B8000C;
     background-color: #c7c5c5;
     color: black;
@@ -105,9 +131,9 @@ body {
     background-color: rgb(230, 224, 40);
 }
 
-.infoBolas, .infoValor {
+.infoBolas {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -116,44 +142,35 @@ body {
 /* div responsavel sobre valor de aposta*/
 .valorDeAposta {
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 16px;
     margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-content:flex-start;
-    align-items:flex-start
+    
 }
 
 .valorAposta {
     padding: 15px;
     border-radius: 10px;
-    border: solid 4px rgb(32, 154, 10);
-    width: 280px;
+    border: solid 3px rgb(32, 154, 10);
+    width: 240px;
     font-weight: bolder;
     font-size: 15px;
     color: black;
 }
 
-.divisoria {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
+
 
 /* mostra a quantidadade de bolas que o jogador esta escolhendo*/
 
 .avisoQtdBolas {
-    width: 180px;
+    width: 120px;
     background-color: rgb(252, 254, 255);
-    padding: 2px;
+    padding: 3px;
     border-radius: 10px;
-    border: 4px rgb(21, 138, 1) dashed;
+    border: 3px rgb(21, 138, 1) dashed;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .QtdBolas {
@@ -176,9 +193,25 @@ body {
     background-color: rgb(246, 241, 233);
     border-radius: 8px;
     width: 150px;
-    margin-left: 8px;
-    margin-top: 20px;
-    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.retornoFinal1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:flex-start;
+    width: 180px;
+    background-color: #29292a;
+    border-radius: 7px;
+    border: 3px rgb(21, 138, 1) dashed;
+    background-color: rgb(252, 254, 255);
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.retornoFinal1  > p {
+    font-weight: bold;
 }
 
 /**** botao para enviar os dados ****/
@@ -199,6 +232,9 @@ body {
 .botao:hover {
     background-color: #5acd0e;
 }
+
+
+
 
 
 /***** area responsavel pelo jogo *****/
@@ -396,7 +432,6 @@ html {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    
 }
 
 .dinheiroApostado > p, .numerosApostado > p, .valorRecebidoRodada > p, .retornoFinal > p, .BolasOk > p {

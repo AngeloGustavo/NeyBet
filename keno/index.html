@@ -7,6 +7,7 @@
     <title>Keno</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="./src/validarDados.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
 </head>
 
 <body class="pai" onload="QuatidadeNumerosSelecionados(0, 0)">
@@ -25,7 +26,6 @@
        
             <div class="bolasParaEscolher">
                 <div class="linha-um">
-                    <div></div>
                     <div class="be1" onclick="bolasEscolhidas(1)" id="bola1"> <p>1</p> </div>
                     <div class="be2" onclick="bolasEscolhidas(2)" id="bola2"> <p>2</p> </div>
                     <div class="be3" onclick="bolasEscolhidas(3)" id="bola3"> <p>3</p> </div>
@@ -100,19 +100,9 @@
             </div>
             
             <div class="divisoria">
-                <div class="infoBolas">
-                    <div class="MsgBolas" id="MsgBolasMax">
-                        <p class="MsgBolasMax">Número máximo de bolas escolhido.<p>
-                    </div>
-    
-                    <div class="avisoQtdBolas">
-                        <div class="titulo"><h4>Número Bolas Escolhidas</h4></div>
-                        <p class="QtdBolas" id="QtdBolasEsc"></p>
-                    </div>
-                </div>
-
                 
                 <div class="infoValor">
+
                     <div class="valorDeAposta">
                         <form action="get" id="formulario">
                             <input type="number" name="valorAposta" id="valorAposta" placeholder="Valor minímo aposta R$: 1,00" class="valorAposta">
@@ -122,14 +112,35 @@
                     <div class="botaoDados">
                         <a href="#ancoraUm"><button type="submit" class="botao" id="btnEnvioDados" onclick="validarDados()">Enviar dados</button></a>
                     </div>
+
+                    <div class="retornoFinal1">
+                        <p>Retorno $: </p>
+                        <p id="RecebeuFinal"></p>
+                    </div>
+
                 </div>
                 
             </div>
             
         </div>
+        <!--
+        <div class="filho2">
+            <div class="infoBolas">
+
+                <div class="avisoQtdBolas">
+                    <div class="titulo"><h4>Número Bolas Escolhidas</h4></div>
+                    <p class="QtdBolas" id="QtdBolasEsc"></p>
+                </div>
+            
+                <div class="MsgBolas" id="MsgBolasMax">
+                    <p class="MsgBolasMax">Número máximo de bolas escolhido.<p>
+                </div>
+
+            </div>
+        </div>-->
  
     </div>
- 
+       <!--
     <div class="sort" id="ancoraUm">
         <div id="bannerDeRodada">
             <h1 id="informaRodadaAtual">Bolas Sorteadas</h1>
@@ -168,7 +179,7 @@
             </div>
 
         </div>
-     
+  
         <div id="bannerAcertadas">
             <h1 id="vitoria">Bolas Acertadas</h1>
         </div>
@@ -230,7 +241,7 @@
             <p id="acertoBall"></p>
         </div>
     </div>
-    
+    -->
 </body>
 </html>
 
