@@ -33,6 +33,7 @@ function controle(){
         var tempoDeProgresso = setInterval(function(){
           clearInterval(tempoDeProgresso);
           document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
+          document.getElementById("progresso").style.display= 'block';
           return false;
         }, 3000);
 
@@ -44,7 +45,7 @@ function controle(){
           atualizarEstatisticas(percentualAtual);   
           preencherEstatisticas();
           return false;
-        }, 8000);
+        }, 9000);
         
         return false;
       }
@@ -73,6 +74,7 @@ function reset(){
   document.getElementById("valorPercentual").style.textShadow = "0px 0px 0px #b8000c, 0px 0px 0px #b8000c, 0 0 0px #b8000c";
   document.getElementById("crashed").style.visibility = "hidden";
   document.getElementById("planoDeFundoProgresso").style.visibility = "hidden";
+  document.getElementById("progresso").style.display= 'none';
   document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>');
   document.getElementById("botaoJogar").disabled = false;
   grafico.style.animationPlayState = "initial";

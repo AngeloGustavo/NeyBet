@@ -196,23 +196,24 @@ input[type=number] {
 }
 
 .progresso{
+  display: none;
   position: absolute;
   top: 36%;
   width: 100%;
   height: 32px;
   opacity : 1;
   border-radius: 5px;
-  background-color: #b8000c;
-  animation: progressao 6s infinite;
-  animation-delay: 5s;
+  background-color: #ffffff;
+  animation: progresso 6.1s infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+/*  animation-delay: 4s;*/
 }
 
-@keyframes progressao{
- /* 0% { width: 0%}
-  100% { width: 100%} */ 
+@keyframes progresso{
   from {
-                width: 0;
-            }
+    width: 0;
+  }
 }
 
 @keyframes circled {
