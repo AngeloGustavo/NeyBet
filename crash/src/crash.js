@@ -30,13 +30,21 @@ function controle(){
         document.getElementById("valorPercentual").style.textShadow = "-2px -2px 5px #b8000c, 2px 2px 5px #b8000c, 0 0 50px #b8000c";
         document.getElementById("crashed").style.visibility = "visible";
 
+        var tempoDeProgresso = setInterval(function(){
+          clearInterval(tempoDeProgresso);
+          document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
+          return false;
+        }, 3000);
+
+        
+
         var tempoDeRecarregar = setInterval(function(){
           clearInterval(tempoDeRecarregar);
           reset();
           atualizarEstatisticas(percentualAtual);   
           preencherEstatisticas();
           return false;
-        }, 5000);
+        }, 8000);
         
         return false;
       }
@@ -64,6 +72,7 @@ function reset(){
   document.getElementById("valorPercentual").innerHTML = "1.00X";
   document.getElementById("valorPercentual").style.textShadow = "0px 0px 0px #b8000c, 0px 0px 0px #b8000c, 0 0 0px #b8000c";
   document.getElementById("crashed").style.visibility = "hidden";
+  document.getElementById("planoDeFundoProgresso").style.visibility = "hidden";
   document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>');
   document.getElementById("botaoJogar").disabled = false;
   grafico.style.animationPlayState = "initial";
@@ -89,13 +98,14 @@ function atualizarEstatisticas(percentualAtual){
 //Preenche as estatiticas, que são os valores sorteados anteriormente
 function preencherEstatisticas() {
   for (var i = 0; i < arrayEstatisticas.length; i++) {
+    var container = document.getElementById("n" + i);
     if (arrayEstatisticas[i] >= 2) {
-      var container = document.getElementById("n" + i);
       container.innerHTML = arrayEstatisticas[i].toFixed(2);
       container.style.backgroundColor = '#59A96A';
     }
     else{
-      document.getElementById("n" + i).innerHTML = arrayEstatisticas[i].toFixed(2);
+      container.innerHTML = arrayEstatisticas[i].toFixed(2);
+      container.style.backgroundColor = '#222222';
     }
   }
 }
