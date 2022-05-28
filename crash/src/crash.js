@@ -16,7 +16,7 @@ function controle(){
   	//Adiciona a animação
     grafico.classList.add("animate");
 
-    var percentualAtual = 1.00; 
+    var percentualAtual = 1.00;
     var valorSorteado = menorRandom();
 
   	//Aumenta a porcentagem um por um
@@ -30,22 +30,40 @@ function controle(){
         document.getElementById("valorPercentual").style.textShadow = "-2px -2px 5px #b8000c, 2px 2px 5px #b8000c, 0 0 50px #b8000c";
         document.getElementById("crashed").style.visibility = "visible";
 
-        var tempoDeProgresso = setInterval(function(){
-          clearInterval(tempoDeProgresso);
-          document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
-          document.getElementById("progresso").style.display= 'block';
-          return false;
-        }, 3000);
-
-        
-
         var tempoDeRecarregar = setInterval(function(){
           clearInterval(tempoDeRecarregar);
           reset();
           atualizarEstatisticas(percentualAtual);   
           preencherEstatisticas();
           return false;
-        }, 9000);
+        }, 4000);
+
+
+        var tempoDeProgresso = setInterval(function(){
+          clearInterval(tempoDeProgresso);
+          document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
+          document.getElementById("progresso").style.display= 'flex';
+
+          var tempoDeProgressoAtual = 6.00;
+
+          var tempoDeProgAtual = setInterval(function(){
+            if (tempoDeProgressoAtual == 0.01) {
+              clearInterval(tempoDeProgAtual);
+              return false;
+            }else{
+              tempoDeProgressoAtual = tempoDeProgressoAtual - 0.01;
+              document.getElementById("tempoDeProgresso").innerHTML = tempoDeProgressoAtual.toFixed(2); 
+            }
+          }, 10);
+
+          return false;
+        }, 4100);
+
+        var tempo = setInterval(function(){
+          clearInterval(tempo);
+          reniciar();
+          return false;
+        }, 10100);
         
         return false;
       }
@@ -73,12 +91,17 @@ function reset(){
   document.getElementById("valorPercentual").innerHTML = "1.00X";
   document.getElementById("valorPercentual").style.textShadow = "0px 0px 0px #b8000c, 0px 0px 0px #b8000c, 0 0 0px #b8000c";
   document.getElementById("crashed").style.visibility = "hidden";
+  document.getElementById("grafico").style.animationPlayState = "initial";
+
+}
+
+function reniciar(){
   document.getElementById("planoDeFundoProgresso").style.visibility = "hidden";
+  document.getElementById("tempoDeProgresso").innerHTML = "6.00";
   document.getElementById("progresso").style.display= 'none';
+  // document.getElementById("textoDeProgresso").style.display= 'none';
   document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>');
   document.getElementById("botaoJogar").disabled = false;
-  grafico.style.animationPlayState = "initial";
-  grafico.style.webkitAnimationPlayState = "initial"; //if webkit
 }
 
 //Para no valor que o usuario deseja

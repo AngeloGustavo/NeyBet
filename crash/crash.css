@@ -204,10 +204,23 @@ input[type=number] {
   opacity : 1;
   border-radius: 5px;
   background-color: #ffffff;
-  animation: progresso 6.1s infinite;
+  animation: progresso 6s infinite;
   animation-direction: reverse;
   animation-timing-function: linear;
-/*  animation-delay: 4s;*/
+}
+
+.textoDeProgresso{
+  font-size: 13px;
+  height: 15px;
+  margin: 2px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #fff;
+  position: absolute;
+  top: 1%;
+  opacity : 1;
 }
 
 @keyframes progresso{
