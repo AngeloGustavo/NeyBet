@@ -56,7 +56,7 @@ function controle(){
           }, 10);
 
           return false;
-        }, 4100);
+        }, 4150);
 
         var tempo = setInterval(function(){
           clearInterval(tempo);
