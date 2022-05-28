@@ -39,15 +39,14 @@ function controle(){
         }, 4000);
 
 
-        var tempoDeProgresso = setInterval(function(){
-          clearInterval(tempoDeProgresso);
+        var tempoDeProg = setInterval(function(){
+          clearInterval(tempoDeProg);
           document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
           document.getElementById("progresso").style.display= 'flex';
 
           var tempoDeProgressoAtual = 6.00;
-
           var tempoDeProgAtual = setInterval(function(){
-            if (tempoDeProgressoAtual == 0.01) {
+            if (tempoDeProgressoAtual <= 0.01) {
               clearInterval(tempoDeProgAtual);
               return false;
             }else{
