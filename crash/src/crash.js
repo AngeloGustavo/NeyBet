@@ -88,18 +88,16 @@ function atualizarEstatisticas(percentualAtual){
 
 //Preenche as estatiticas, que são os valores sorteados anteriormente
 function preencherEstatisticas() {
-  document.getElementById("n1").innerHTML = arrayEstatisticas[0].toFixed(2);
-  document.getElementById("n2").innerHTML = arrayEstatisticas[1].toFixed(2);
-  document.getElementById("n3").innerHTML = arrayEstatisticas[2].toFixed(2);
-  document.getElementById("n4").innerHTML = arrayEstatisticas[3].toFixed(2);
-  document.getElementById("n5").innerHTML = arrayEstatisticas[4].toFixed(2);
-  document.getElementById("n6").innerHTML = arrayEstatisticas[5].toFixed(2);
-  document.getElementById("n7").innerHTML = arrayEstatisticas[6].toFixed(2);
-  document.getElementById("n8").innerHTML = arrayEstatisticas[7].toFixed(2);
-  document.getElementById("n9").innerHTML = arrayEstatisticas[8].toFixed(2);
-  document.getElementById("n10").innerHTML = arrayEstatisticas[9].toFixed(2);
-  document.getElementById("n11").innerHTML = arrayEstatisticas[10].toFixed(2);
-  document.getElementById("n12").innerHTML = arrayEstatisticas[11].toFixed(2);
+  for (var i = 0; i < arrayEstatisticas.length; i++) {
+    if (arrayEstatisticas[i] >= 2) {
+      var container = document.getElementById("n" + i);
+      container.innerHTML = arrayEstatisticas[i].toFixed(2);
+      container.style.backgroundColor = '#59A96A';
+    }
+    else{
+      document.getElementById("n" + i).innerHTML = arrayEstatisticas[i].toFixed(2);
+    }
+  }
 }
 
 //Retorna o menor valor sorteado 200 vezes entre 0 e 1000 
