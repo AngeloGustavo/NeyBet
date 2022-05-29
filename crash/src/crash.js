@@ -9,7 +9,7 @@ var arrayEstatisticas = [menorRandom(), menorRandom(), menorRandom(),
 function controle(){
 
   if (document.getElementById("entrada").value != "") {
-    document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar<div class="multiplicador" id="multiplicador"> </div></button> ');
+    document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar&nbsp<div class="valorGanho" id="valorGanho"> 0.00</div></button> ');
 
     var grafico = document.getElementById("grafico");
 
@@ -18,6 +18,7 @@ function controle(){
 
     var percentualAtual = 1.00;
     var valorSorteado = menorRandom();
+    var valorGanhoAtual = 0.00;
 
   	//Aumenta a porcentagem um por um
     var currTimeout = setInterval(function(){
@@ -67,9 +68,14 @@ function controle(){
         return false;
       }
       else{
-        if(parar == true){
-          document.getElementById("multiplicador").innerHTML = percentualAtual.toFixed(2)+"X";
-          parar = false;
+        if (parar == false) {
+          valorGanhoAtual = document.getElementById("entrada").value * percentualAtual;
+          document.getElementById("valorGanho").innerHTML = valorGanhoAtual.toFixed(2);
+          document.getElementById("multiplicador").innerHTML = "X"+percentualAtual.toFixed(2);
+        }else{
+          document.getElementById("planoDeFundoRetirada").style.visibility = "visible";
+          document.getElementById("valorGanho").innerHTML = valorGanhoAtual.toFixed(2);
+          document.getElementById("valorGanhoFinal").innerHTML = valorGanhoAtual.toFixed(2);
         }
 
         //Soma porcentagem atual
@@ -88,17 +94,20 @@ function reset(){
 	var grafico = document.getElementById("grafico");
   grafico.classList.remove("animate");
   document.getElementById("valorPercentual").innerHTML = "1.00X";
+  document.getElementById("multiplicador").innerHTML = "X1.00";
+  document.getElementById("valorGanho").innerHTML = "0.00";
+  document.getElementById("valorGanhoFinal").innerHTML = "0.00"
   document.getElementById("valorPercentual").style.textShadow = "0px 0px 0px #b8000c, 0px 0px 0px #b8000c, 0 0 0px #b8000c";
   document.getElementById("crashed").style.visibility = "hidden";
+  document.getElementById("planoDeFundoRetirada").style.visibility = "hidden";
   document.getElementById("grafico").style.animationPlayState = "initial";
-
+  parar = false;
 }
 
 function reniciar(){
   document.getElementById("planoDeFundoProgresso").style.visibility = "hidden";
   document.getElementById("tempoDeProgresso").innerHTML = "6.00";
   document.getElementById("progresso").style.display= 'none';
-  // document.getElementById("textoDeProgresso").style.display= 'none';
   document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>');
   document.getElementById("botaoJogar").disabled = false;
 }
@@ -106,7 +115,7 @@ function reniciar(){
 //Para no valor que o usuario deseja
 function stop(){  
   parar = true;
-  document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar<div class="multiplicador" id="multiplicador"> </div></button> ');
+  document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar&nbsp<div class="valorGanho" id="valorGanho"> 0.00</div></button> ');
   document.getElementById("botaoRetirar").disabled = true;
 }
 
