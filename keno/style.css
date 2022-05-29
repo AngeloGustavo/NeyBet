@@ -162,6 +162,268 @@ body {
 
 /*inicio da responsividade*/
 
+@media screen and (min-width: 430px) and (max-width: 479px){
+    .barraSuperior {
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        margin-right: 0%;
+        padding-right: 0%;
+    }
+
+    .barraSuperior > h2 {
+        font-size: 12px;
+        color: aliceblue;
+    }
+
+    .boasVindas {
+        width: 50%;
+    }
+
+    .boasVindas > h1 {
+        font-size: 18px;
+    }
+
+    .filho1 {
+        width: 99%;
+        padding: 8px;
+        margin-right: 15px;
+    }
+
+
+    .linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
+        margin: 15px 4px 5px 4px;
+        padding: 2px;
+        width: 24px;
+        font-size: 12px;
+        border: #4b207f 1px solid;
+        box-shadow: 2px 2px 2px #4b207f;
+    }
+
+    .valorAposta {
+        padding: 8px;
+        width: 120px;
+        border: solid 2px rgb(32, 154, 10);
+        font-size: 12px;
+    }
+
+    .botao {
+        background-color: darkgreen;
+        width: 60px;
+        padding: 8px;
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+        
+    .retornoFinal1 {
+        width: 150px;
+        background-color: #29292a;
+        border-radius: 8px;
+        border: 3px rgb(21, 138, 1) dashed;
+        background-color: rgb(252, 254, 255);
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    .retornoFinal1 > p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 651px) {
+    .barraSuperior {
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        margin-right: 0%;
+        padding-right: 0%;
+    }
+
+    .barraSuperior > h2 {
+        font-size: 12px;
+        color: aliceblue;
+    }
+
+    .boasVindas {
+        width: 50%;
+    }
+
+    .boasVindas > h1 {
+        font-size: 18px;
+    }
+
+    .filho1 {
+        width: 99%;
+        padding: 8px;
+        margin-right: 15px;
+    }
+
+    .linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
+        margin: 15px 4px 5px 4px;
+        padding: 2px;
+        width: 26px;
+        font-size: 14px;
+    }
+
+    .valorAposta {
+        padding: 8px;
+        width: 140px;
+    }
+
+    .botao {
+        background-color: darkgreen;
+        width: 80px;
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+        
+    .retornoFinal1 {
+        width: 150px;
+        background-color: #29292a;
+        border-radius: 8px;
+        border: 3px rgb(21, 138, 1) dashed;
+        background-color: rgb(252, 254, 255);
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    .retornoFinal1 > p {
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (min-width: 650px) and (max-width: 750px) {
+    .barraSuperior {
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        margin-right: 0%;
+        padding-right: 0%;
+    }
+
+    .barraSuperior > h2 {
+        font-size: 12px;
+        color: aliceblue;
+    }
+
+    .boasVindas {
+        width: 50%;
+    }
+
+    .boasVindas > h1 {
+        font-size: 18px;
+    }
+
+    .filho1 {
+        width: 99%;
+        padding: 8px;
+        margin-right: 15px;
+    }
+
+    .linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
+        margin: 15px 6px 5px 6px;
+        padding: 2px;
+        width: 36px;
+        font-size: 16px;
+    }
+
+    .valorAposta {
+        padding: 10px;
+        width: 200px;
+    }
+
+    .botao {
+        background-color: darkgreen;
+        width: 100px;
+        padding: 8px;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+        
+    .retornoFinal1 {
+        width: 170px;
+        background-color: #29292a;
+        border-radius: 8px;
+        border: 3px rgb(21, 138, 1) dashed;
+        background-color: rgb(252, 254, 255);
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 899px) {
+    .barraSuperior {
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        margin-right: 0%;
+        padding-right: 0%;
+    }
+
+    .barraSuperior > h2 {
+        font-size: 12px;
+        color: aliceblue;
+    }
+
+    .boasVindas {
+        width: 50%;
+    }
+
+    .boasVindas > h1 {
+        font-size: 18px;
+    }
+
+    .filho1 {
+        width: 97%;
+        padding: 8px;
+        margin-right: 15px;
+    }
+
+    .linha-um > .be1, .linha-um > .be2, .linha-um > .be3, .linha-um > .be4, .linha-um > .be5, .linha-um > .be6, .linha-um > .be7, .linha-um > .be8, .linha-um > .be9, .linha-um > .be10, .linha-um > .be11, .linha-um > .be12, .linha-um > .be13, .linha-um > .be14, .linha-um > .be15, .linha-um > .be16, .linha-um > .be17, .linha-um > .be18, .linha-um > .be19, .linha-um > .be20, .linha-um > .be21, .linha-um > .be22, .linha-um > .be23, .linha-um > .be24, .linha-um > .be25, .linha-um > .be26, .linha-um > .be27, .linha-um > .be28, .linha-um > .be29, .linha-um > .be30, .linha-um > .be31, .linha-um > .be32, .linha-um > .be33, .linha-um > .be34, .linha-um > .be35, .linha-um > .be36, .linha-um > .be37, .linha-um > .be38, .linha-um > .be39, .linha-um > .be40, .linha-um > .be41, .linha-um > .be42, .linha-um > .be43, .linha-um > .be44, .linha-um > .be45, .linha-um > .be46, .linha-um > .be47, .linha-um > .be48, .linha-um > .be49, .linha-um > .be50 {
+        margin: 15px 6px 5px 6px;
+        padding: 2px;
+        width: 36px;
+        font-size: 16px;
+    }
+
+    .valorAposta {
+        padding: 10px;
+        width: 220px;
+    }
+
+    .botao {
+        background-color: darkgreen;
+        width: 130px;
+        padding: 8px;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+        
+    .retornoFinal1 {
+        width: 190px;
+        background-color: #29292a;
+        border-radius: 8px;
+        border: 3px rgb(21, 138, 1) dashed;
+        background-color: rgb(252, 254, 255);
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+}
+
 @media screen and (min-width: 900px) and (max-width: 1100px) {
     .barraSuperior {
         width: 100%;
@@ -517,7 +779,6 @@ body {
         padding: 10px;
         width: 220px;
     }
-
 
     .botao {
         background-color: darkgreen;
