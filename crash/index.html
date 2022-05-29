@@ -17,22 +17,31 @@
     <div class="linha">    
 
       <div class="coluna1">        
-          <!-- <div class="progress"></div> -->
+        
+
         <div class="areaGrafico">
-          <div class="grafico" id="grafico">
+          <div class="planoDeFundoProgresso" id="planoDeFundoProgresso">
+            <div class="textoDeProgresso"> Começando em&nbsp;<div class="tempoDeProgresso" id="tempoDeProgresso">6.00</div></div>
+            <div class="progresso" id="progresso"> </div> 
           </div>
+          <div class="grafico" id="grafico"></div>
             <div class="centroDoGrafico">
-              <div class="crashed" id="crashed">
-                CRASHED
+              <div class="planoDeFundoRetirada" id="planoDeFundoRetirada">
+                <div class="multiplicador" id="multiplicador"> X1.00</div>
+                <div class="textoValorGanho" id="textoValorGanho"> Você ganhou R$&nbsp; <div class="valorGanho" id="valorGanhoFinal"> 0.00</div></div>
               </div>
               <div class="valorPercentual" id="valorPercentual">
                 1.00X
               </div>
+              <div class="crashed" id="crashed">
+                CRASHED
+              </div>
             </div>
         </div>
-        
+               
         <div class="anterior"> ANTERIOR</div>
         <div class="areaEstatisticas">
+          <div class="estatistica" id="n0"> </div>
           <div class="estatistica" id="n1"> </div>
           <div class="estatistica" id="n2"> </div>
           <div class="estatistica" id="n3"> </div>
@@ -44,7 +53,6 @@
           <div class="estatistica" id="n9"> </div>
           <div class="estatistica" id="n10"> </div>
           <div class="estatistica" id="n11"> </div>
-          <div class="estatistica" id="n12"> </div>
           <script> preencherEstatisticas(); </script>
         </div> 
       </div>

@@ -9,15 +9,16 @@ var arrayEstatisticas = [menorRandom(), menorRandom(), menorRandom(),
 function controle(){
 
   if (document.getElementById("entrada").value != "") {
-    document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar<div class="multiplicador" id="multiplicador"> </div></button> ');
+    document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar&nbsp<div class="valorGanho" id="valorGanho"> 0.00</div></button> ');
 
     var grafico = document.getElementById("grafico");
 
   	//Adiciona a animação
     grafico.classList.add("animate");
 
-    var percentualAtual = 1.00; 
+    var percentualAtual = 1.00;
     var valorSorteado = menorRandom();
+    var valorGanhoAtual = 0.00;
 
   	//Aumenta a porcentagem um por um
     var currTimeout = setInterval(function(){
@@ -36,14 +37,45 @@ function controle(){
           atualizarEstatisticas(percentualAtual);   
           preencherEstatisticas();
           return false;
-        }, 5000);
+        }, 4000);
+
+
+        var tempoDeProg = setInterval(function(){
+          clearInterval(tempoDeProg);
+          document.getElementById("planoDeFundoProgresso").style.visibility = "visible";
+          document.getElementById("progresso").style.display= 'flex';
+
+          var tempoDeProgressoAtual = 6.00;
+          var tempoDeProgAtual = setInterval(function(){
+            if (tempoDeProgressoAtual <= 0.01) {
+              clearInterval(tempoDeProgAtual);
+              return false;
+            }else{
+              tempoDeProgressoAtual = tempoDeProgressoAtual - 0.01;
+              document.getElementById("tempoDeProgresso").innerHTML = tempoDeProgressoAtual.toFixed(2); 
+            }
+          }, 10);
+
+          return false;
+        }, 4150);
+
+        var tempo = setInterval(function(){
+          clearInterval(tempo);
+          reniciar();
+          return false;
+        }, 10100);
         
         return false;
       }
       else{
-        if(parar == true){
-          document.getElementById("multiplicador").innerHTML = percentualAtual.toFixed(2)+"X";
-          parar = false;
+        if (parar == false) {
+          valorGanhoAtual = document.getElementById("entrada").value * percentualAtual;
+          document.getElementById("valorGanho").innerHTML = valorGanhoAtual.toFixed(2);
+          document.getElementById("multiplicador").innerHTML = "X"+percentualAtual.toFixed(2);
+        }else{
+          document.getElementById("planoDeFundoRetirada").style.visibility = "visible";
+          document.getElementById("valorGanho").innerHTML = valorGanhoAtual.toFixed(2);
+          document.getElementById("valorGanhoFinal").innerHTML = valorGanhoAtual.toFixed(2);
         }
 
         //Soma porcentagem atual
@@ -62,18 +94,28 @@ function reset(){
 	var grafico = document.getElementById("grafico");
   grafico.classList.remove("animate");
   document.getElementById("valorPercentual").innerHTML = "1.00X";
+  document.getElementById("multiplicador").innerHTML = "X1.00";
+  document.getElementById("valorGanho").innerHTML = "0.00";
+  document.getElementById("valorGanhoFinal").innerHTML = "0.00"
   document.getElementById("valorPercentual").style.textShadow = "0px 0px 0px #b8000c, 0px 0px 0px #b8000c, 0 0 0px #b8000c";
   document.getElementById("crashed").style.visibility = "hidden";
+  document.getElementById("planoDeFundoRetirada").style.visibility = "hidden";
+  document.getElementById("grafico").style.animationPlayState = "initial";
+  parar = false;
+}
+
+function reniciar(){
+  document.getElementById("planoDeFundoProgresso").style.visibility = "hidden";
+  document.getElementById("tempoDeProgresso").innerHTML = "6.00";
+  document.getElementById("progresso").style.display= 'none';
   document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>');
   document.getElementById("botaoJogar").disabled = false;
-  grafico.style.animationPlayState = "initial";
-  grafico.style.webkitAnimationPlayState = "initial"; //if webkit
 }
 
 //Para no valor que o usuario deseja
 function stop(){  
   parar = true;
-  document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar<div class="multiplicador" id="multiplicador"> </div></button> ');
+  document.getElementById("botoes").innerHTML =('<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar&nbsp<div class="valorGanho" id="valorGanho"> 0.00</div></button> ');
   document.getElementById("botaoRetirar").disabled = true;
 }
 
@@ -88,18 +130,17 @@ function atualizarEstatisticas(percentualAtual){
 
 //Preenche as estatiticas, que são os valores sorteados anteriormente
 function preencherEstatisticas() {
-  document.getElementById("n1").innerHTML = arrayEstatisticas[0].toFixed(2);
-  document.getElementById("n2").innerHTML = arrayEstatisticas[1].toFixed(2);
-  document.getElementById("n3").innerHTML = arrayEstatisticas[2].toFixed(2);
-  document.getElementById("n4").innerHTML = arrayEstatisticas[3].toFixed(2);
-  document.getElementById("n5").innerHTML = arrayEstatisticas[4].toFixed(2);
-  document.getElementById("n6").innerHTML = arrayEstatisticas[5].toFixed(2);
-  document.getElementById("n7").innerHTML = arrayEstatisticas[6].toFixed(2);
-  document.getElementById("n8").innerHTML = arrayEstatisticas[7].toFixed(2);
-  document.getElementById("n9").innerHTML = arrayEstatisticas[8].toFixed(2);
-  document.getElementById("n10").innerHTML = arrayEstatisticas[9].toFixed(2);
-  document.getElementById("n11").innerHTML = arrayEstatisticas[10].toFixed(2);
-  document.getElementById("n12").innerHTML = arrayEstatisticas[11].toFixed(2);
+  for (var i = 0; i < arrayEstatisticas.length; i++) {
+    var container = document.getElementById("n" + i);
+    if (arrayEstatisticas[i] >= 2) {
+      container.innerHTML = arrayEstatisticas[i].toFixed(2);
+      container.style.backgroundColor = '#59A96A';
+    }
+    else{
+      container.innerHTML = arrayEstatisticas[i].toFixed(2);
+      container.style.backgroundColor = '#222222';
+    }
+  }
 }
 
 //Retorna o menor valor sorteado 200 vezes entre 0 e 1000 
