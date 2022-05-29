@@ -321,8 +321,22 @@ function QuatidadeNumerosSelecionados(quantidadeNumSelec, gatilho) {
     if(quantidadeNumSelec == 12) {
         alert("Você atingiu o máximo de bolas!"); 
     } 
+    tamanhoTela();
     
 }
+
+function tamanhoTela() {
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    var screenWidth = screen.width;
+    var screenHeight = screen.height;
+
+    document.getElementById("teste").innerHTML = windowWidth + 'x' + windowHeight;
+
+    document.getElementById("teste1").innerHTML = screenWidth + 'x' + screenHeight;
+}
+
 
 // função apos clicar no botao de enviar os dados
 // faz a validação dos dados inseridos
