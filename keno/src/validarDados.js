@@ -1,6 +1,3 @@
-/*var verificacaoValorAposta = 0, verificacaoNumerosApostados = 0;
-var PegaValorApostado, PegaQtdNumerosApostados, vetorNumerosJogados = [];
-*/
 // INICIO NOVA CONFIG
 var vetorEx = [];
 var vetorNumerosApostados = [];
@@ -320,19 +317,10 @@ var contadora = 0;
 // funcao que mostra a quantidade de numeros que o jogador 
 // esta selecionando, direto na interface
 function QuatidadeNumerosSelecionados(quantidadeNumSelec, gatilho) {
-    
-    /*if(gatilho == 0) { //iniciou o jogo
-        document.getElementById("QtdBolasEsc").innerHTML = 0;
-    } else {
-        document.getElementById("QtdBolasEsc").innerHTML = quantidadeNumSelec;
-    }*/
-
+   
     if(quantidadeNumSelec == 12) {
-        alert("Você atingiu o máximo de bolas!");
-        //document.getElementById("MsgBolasMax").style.display= 'flex';  
-    } /*else {
-        document.getElementById("MsgBolasMax").style.display= 'none';
-    }*/
+        alert("Você atingiu o máximo de bolas!"); 
+    } 
     
 }
 
@@ -344,10 +332,7 @@ function validarDados() {
     aposta = recebeValorApostadoJ;
     if(recebeValorApostadoJ >= 1 && validaNumerosEscolhidos() >= 1 && validaNumerosEscolhidos() <= 12) {
         alert("Aposta lida com sucesso! \nVocê apostará $:" + recebeValorApostadoJ + "." + "\nSua aposta tem " + validaNumerosEscolhidos() + " números, eles são " + ordenaNumeros(vetorNumerosApostados) + "\nClique em 'OK' para iniciar o jogo");
-        //preencheBolasSorteadaRodadaUm();
         setTimeout(preencheBolasSorteadaRodadaUm, 2000);
-        //setTimeout(preencheBolasAcertadasRodadaUm, 2000);
-
     } else {
         alert("Número máximo de bolas é 12 e valor minimo de aposta é R$: 1,00.");
     }
@@ -362,6 +347,9 @@ function ordenaNumeros(vetorNumerosDesordenados_) {
 
     return vetorNumerosDesordenados_;
 }
+
+
+
 
 /*======Essa parte corresponde ao inicio do jogo=========*/ 
 
@@ -435,202 +423,302 @@ function preencheBolasAcertadasRodadaUm(listaNumerosSorteados) {
             case 1: 
                 var container = document.getElementById("bola1");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 2: 
                 var container = document.getElementById("bola2");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 3: 
                 var container = document.getElementById("bola3");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 4: 
                 var container = document.getElementById("bola4");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 5: 
                 var container = document.getElementById("bola5");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 6: 
                 var container = document.getElementById("bola6");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 7: 
                 var container = document.getElementById("bola7");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 8: 
                 var container = document.getElementById("bola8");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 9: 
                 var container = document.getElementById("bola9");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 10: 
                 var container = document.getElementById("bola10");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 11: 
                 var container = document.getElementById("bola11");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 12: 
                 var container = document.getElementById("bola12");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 13: 
                 var container = document.getElementById("bola13");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 14: 
                 var container = document.getElementById("bola14");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 15: 
                 var container = document.getElementById("bola15");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 16: 
                 var container = document.getElementById("bola16");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 17: 
                 var container = document.getElementById("bola17");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break; 
             case 18: 
                 var container = document.getElementById("bola18");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 19: 
                 var container = document.getElementById("bola19");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 20: 
                 var container = document.getElementById("bola20");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 21: 
                 var container = document.getElementById("bola21");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 22: 
                 var container = document.getElementById("bola22");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 23: 
                 var container = document.getElementById("bola23");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 24: 
                 var container = document.getElementById("bola24");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 25: 
                 var container = document.getElementById("bola25");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 26: 
                 var container = document.getElementById("bola26");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 27: 
                 var container = document.getElementById("bola27");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 28: 
                 var container = document.getElementById("bola28");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 29: 
                 var container = document.getElementById("bola29");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 30: 
                 var container = document.getElementById("bola30");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 31: 
                 var container = document.getElementById("bola31");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 32: 
                 var container = document.getElementById("bola32");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 33: 
                 var container = document.getElementById("bola33");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 34: 
                 var container = document.getElementById("bola34");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 35: 
                 var container = document.getElementById("bola35");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 36: 
                 var container = document.getElementById("bola36");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 37: 
                 var container = document.getElementById("bola37");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 38: 
                 var container = document.getElementById("bola38");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 39: 
                 var container = document.getElementById("bola39");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 40: 
                 var container = document.getElementById("bola40");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 41: 
                 var container = document.getElementById("bola41");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 42: 
                 var container = document.getElementById("bola42");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 43: 
                 var container = document.getElementById("bola43");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 44: 
                 var container = document.getElementById("bola44");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 45: 
                 var container = document.getElementById("bola45");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 46: 
                 var container = document.getElementById("bola46");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 47: 
                 var container = document.getElementById("bola47");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 48: 
                 var container = document.getElementById("bola48");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 49: 
                 var container = document.getElementById("bola49");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             case 50: 
                 var container = document.getElementById("bola50");
                 container.style.backgroundColor = '#109715';
+                container.style.borderColor = '#083c16';
+                container.style.boxShadow = '2px 2px 2px #083c16';
                 break;
             default:
                 text = "Erro!! cor de fundo números sorteados.";
@@ -640,15 +728,17 @@ function preencheBolasAcertadasRodadaUm(listaNumerosSorteados) {
     preencheBolasSort(listaNumerosSorteados, numerosAcertados);
 
     calculaValorRodada();
+    preencheInterface();
 }
 
 //função seleciona as bolas sorteadas - acertadas, gerando a diferença
 function preencheBolasSort(numSort, numAc) {
+    
     var vetorDiferenca = [];
     vetorDiferenca = numSort.filter(function(item) {
         return !~$.inArray(item, numAc);
     });
-  
+    
     for(var i = 0; i < vetorDiferenca.length; i++) {
         switch (vetorDiferenca[i]) {
             case 1: 
@@ -856,13 +946,13 @@ function preencheBolasSort(numSort, numAc) {
         }
     }
 
-    calculaValorRodada();
-    preencheInterface();
 }
 
 
 
 /* parte referencia ao calculo e resultado do jogo*/
+
+
 
 // linha matriz = qtd numeros jogados
 // coluna matriz = qtd numeros sorteados que foram sorteados
