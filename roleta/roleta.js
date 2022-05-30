@@ -14,11 +14,11 @@ document.getElementById("spin").addEventListener("click", spin);
 
 function getColor(posicao) {
     if(posicao == 0){
-        return '#FFF';
+      return '#FFF';
     }else if(posicao%2 == 0){
-        return '#000';
+      return '#000';
     }
-    return '#F00';
+    return '#B8000C';
 }
 
 function drawRouletteWheel() {
@@ -77,15 +77,17 @@ function spin() {
 }
 
 function rotateWheel() {
-  spinTime += 30;
-  if(spinTime >= spinTimeTotal) {
-    stopRotateWheel();
-    return;
+  if(document.getElementById("form").value != ""){
+    spinTime += 30;
+    if(spinTime >= spinTimeTotal) {
+      stopRotateWheel();
+      return;
+    }
+    var spinAngle = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
+    startAngle += (spinAngle * Math.PI / 180);
+    drawRouletteWheel();
+    spinTimeout = setTimeout('rotateWheel()', 30);
   }
-  var spinAngle = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
-  startAngle += (spinAngle * Math.PI / 180);
-  drawRouletteWheel();
-  spinTimeout = setTimeout('rotateWheel()', 30);
 }
 
 function stopRotateWheel() {
@@ -97,7 +99,7 @@ function stopRotateWheel() {
   var arcd = arc * 180 / Math.PI;
   var index = Math.floor((360 - degrees % 360) / arcd);
   ctx.save();
-  ctx.font = 'bold 30px Helvetica, Arial';
+  ctx.font = 'bold 20px Helvetica, Arial';
   
 
   const btn = document.querySelector('#btn');        
