@@ -150,6 +150,7 @@ h1 {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-bottom: 35px;
 }
 
 .rotulo {
@@ -290,7 +291,7 @@ input[type=number] {
 
   .coluna1 {
     width: 100%;
-    margin-top: 35px;
+    margin-top: 5px;
   }
 
   .areaGrafico {
@@ -336,6 +337,7 @@ input[type=number] {
   .coluna2 {
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 5px;
   }
 
   .rotulo {
@@ -354,7 +356,6 @@ input[type=number] {
     padding: 10px;
     font-size: 12px;
     margin-top: 15px;
-    margin-bottom: 15px;
   }
 
   .planoDeFundoProgresso{
@@ -387,7 +388,7 @@ input[type=number] {
 
   .coluna1 {
     width: 100%;
-    margin-top: 35px;
+    margin-top: 18px;
   }
 
   .areaGrafico {
@@ -433,6 +434,7 @@ input[type=number] {
   .coluna2 {
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 38px;
   }
 
   .rotulo {
@@ -451,7 +453,6 @@ input[type=number] {
     padding: 10px;
     font-size: 13px;
     margin-top: 15px;
-    margin-bottom: 15px;
   }
 
   .planoDeFundoProgresso{
@@ -484,12 +485,12 @@ input[type=number] {
 
   .coluna1 {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   .areaGrafico {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 
   .crashed {
@@ -536,7 +537,8 @@ input[type=number] {
 
   .coluna2 {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .rotulo {
@@ -555,7 +557,6 @@ input[type=number] {
     padding: 10px;
     font-size: 14px;
     margin-top: 15px;
-    margin-bottom: 15px;
   }
 
   .planoDeFundoProgresso{
@@ -587,7 +588,8 @@ input[type=number] {
 
   .coluna1 {
     width: 70%;
-    margin-top: 90px;
+    margin-top: 50px;
+    margin-bottom: 25px;
   }
 
   .areaGrafico {
@@ -666,7 +668,6 @@ input[type=number] {
     padding: 10px;
     font-size: 14px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -699,7 +700,8 @@ input[type=number] {
 
   .coluna1 {
     width: 70%;
-    margin-top: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .areaGrafico {
@@ -759,7 +761,7 @@ input[type=number] {
 
   .coluna2 {
     width: 30%;
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .rotulo {
@@ -778,7 +780,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -810,7 +811,8 @@ input[type=number] {
 
   .coluna1 {
     width: 65%;
-    margin-top: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .areaGrafico {
@@ -889,7 +891,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -922,12 +923,13 @@ input[type=number] {
 
   .coluna1 {
     width: 65%;
-    margin-top: 55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .areaGrafico {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
   }
 
   .crashed {
@@ -1001,7 +1003,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -1034,12 +1035,13 @@ input[type=number] {
 
   .coluna1 {
     width: 65%;
-    margin-top: 45px;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
 
   .areaGrafico {
-    width: 425px;
-    height: 425px;
+    width: 400px;
+    height: 400px;
   }
 
   .crashed {
@@ -1106,7 +1108,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -1139,12 +1140,13 @@ input[type=number] {
 
   .coluna1 {
     width: 65%;
-    margin-top: 35px;
+    margin-top: 110px;
+    margin-bottom: 5px;
   }
 
   .areaGrafico {
-    width: 450px;
-    height: 450px;
+    width: 475px;
+    height: 475px;
   }
 
   .crashed {
@@ -1192,7 +1194,7 @@ input[type=number] {
 
   .coluna2 {
     width: 35%;
-    margin-top: 80px;
+    margin-top: 175px;
   }
 
   .rotulo {
@@ -1211,7 +1213,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
@@ -1244,12 +1245,13 @@ input[type=number] {
 
   .coluna1 {
     width: 65%;
-    margin-top: 25px;
+    margin-top: 200px;
+    margin-bottom: 5px;
   }
 
   .areaGrafico {
-    width: 500px;
-    height: 500px;
+    width: 525px;
+    height: 525px;
   }
 
   .crashed {
@@ -1297,7 +1299,7 @@ input[type=number] {
 
   .coluna2 {
     width: 35%;
-    margin-top: 80px;
+    margin-top: 250px;
   }
 
   .rotulo {
@@ -1316,7 +1318,6 @@ input[type=number] {
     padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    margin-bottom: 20px;
   }
 
   .planoDeFundoProgresso{
