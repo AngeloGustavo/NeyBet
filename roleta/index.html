@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <script src="jquery-3.6.0.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/navbar.css">
 	<link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../crash/crash.css">
 
-	<title>NeyBet</title>
+	<title>Roleta</title>
 </head>
 <body>
 
 <script src="../js/navbarUpDir.js"></script>
-
-<canvas id="canvas" width="500" height="500"></canvas>
-<div class="radio-toolbar">
-    <input type="radio" id="radioBranco" name="cor" value="Branco" checked>
-    <label for="radioBranco">Branco (10x)</label>
-
-    <input type="radio" id="radioVermelho" name="cor" value="Vermelho">
-    <label for="radioVermelho">Vermelho (2x)</label>
-
-    <input type="radio" id="radioPreto" name="cor" value="Preto">
-    <label for="radioPreto">Preto (2x)</label> 
+<div class="linha">   
+<div class="coluna1"> 
+    <canvas id="canvas" width="500" height="500"></canvas>
 </div>
-<!-- <form onsubmit="return false" method="post" name="myForm" id="myForm"> -->
-    <input type="number" name="name" id="form" required="required">
-    <input value="Apostar" style="float:left;" id='spin' class="submit" type="submit" name="submit"/>
-<!-- </form> -->
+<div class="coluna2">
+    <input type="number" placeholder="R$" class="entrada" name="name" id="form" required="required">
+    
+    <div class="radio-toolbar">
+        <input type="radio"  placeholder="10x" id="radioBranco" name="cor" value="Branco" class="botoes" checked>
+        <label for="radioBranco" style="background-color: white; color:black;">10x</label>
+
+        <input type="radio" id="radioVermelho" name="cor" value="Vermelho" class="botoes">
+        <label for="radioVermelho">2x</label>
+
+        <input type="radio" id="radioPreto" name="cor" value="Preto" class="botoes">
+        <label for="radioPreto"  style="background-color: black;">2x</label> 
+    </div>
+
+    
+    <div class="botoes" id="botoes"><input value="Apostar" class="botao" style="float:left;" id='spin' class="submit" type="submit" name="submit"/></div>
+</div>
+</div>
+
 <script src="roleta.js"></script>
 
 <div class="footer">
