@@ -8,6 +8,8 @@
     
     <link rel="shortcut icon" href="../favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="../crash/crash.css"> -->
+
 
     <script src="../js/navbarUpDir.js"></script>
     <link rel="stylesheet" href="../css/navbar.css">
@@ -26,9 +28,9 @@
         <h2>Lorem ipsum </h2>
     </div>-->
    
-    <div class="boasVindas">
+    <!-- <div class="boasVindas">
         <h1>Bem vindo ao Keno</h1>
-    </div>
+    </div> -->
        
     <div class="div-mae">
         
@@ -117,7 +119,7 @@
 
                     <div class="valorDeAposta">
                         <form action="get" id="formulario">
-                            <input type="number" name="valorAposta" id="valorAposta" placeholder="aposta min R$: 1,00" class="valorAposta">
+                            <input type="number" name="valorAposta" id="valorAposta" placeholder="R$" class="valorAposta">
                         </form>
                     </div>
         
@@ -125,8 +127,8 @@
                         <a href="#ancoraUm"><button type="submit" class="botao" id="btnEnvioDados" onclick="validarDados()">Jogar</button></a>
                     </div>
 
-                    <div class="retornoFinal1">
-                        <p>Retorno $: </p>
+                    <div id="retornoFinal1" class="retornoFinal1" style="visibility:hidden;">
+                        <!-- <p>Retorno $: </p> -->
                         <p id="RecebeuFinal"></p>
                     </div>
 
