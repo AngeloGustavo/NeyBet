@@ -297,7 +297,7 @@ function mudaCordeFundo(numero, gatilho) {
 }
 
 // função descobre quantos numeros o jogador escolheu
-// minimo = 1 numero e maximo = 12 numeros
+// minimo = 1 numero e maximo = 10 numeros
 function validaNumerosEscolhidos() {
 var contadora = 0;
 
@@ -318,13 +318,13 @@ var contadora = 0;
 // esta selecionando, direto na interface
 function QuatidadeNumerosSelecionados(quantidadeNumSelec, gatilho) {
    
-    if(quantidadeNumSelec == 12) {
+    if(quantidadeNumSelec == 10) {
         alert("Você atingiu o máximo de bolas!"); 
     } 
     tamanhoTela();
     
 }
-
+/*
 function tamanhoTela() {
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
@@ -335,7 +335,7 @@ function tamanhoTela() {
     document.getElementById("teste").innerHTML = windowWidth + 'x' + windowHeight;
 
     document.getElementById("teste1").innerHTML = screenWidth + 'x' + screenHeight;
-}
+}*/
 
 
 // função apos clicar no botao de enviar os dados
@@ -344,11 +344,11 @@ var recebeValorApostadoJ = 0;
 function validarDados() {
     recebeValorApostadoJ = document.getElementById("valorAposta").value;
     aposta = recebeValorApostadoJ;
-    if(recebeValorApostadoJ >= 1 && validaNumerosEscolhidos() >= 1 && validaNumerosEscolhidos() <= 12) {
+    if(recebeValorApostadoJ >= 1 && validaNumerosEscolhidos() >= 1 && validaNumerosEscolhidos() <= 10) {
         alert("Aposta lida com sucesso! \nVocê apostará $:" + recebeValorApostadoJ + "." + "\nSua aposta tem " + validaNumerosEscolhidos() + " números, eles são " + ordenaNumeros(vetorNumerosApostados) + "\nClique em 'OK' para iniciar o jogo");
         setTimeout(preencheBolasSorteadaRodadaUm, 2000);
     } else {
-        alert("Número máximo de bolas é 12 e valor minimo de aposta é R$: 1,00.");
+        alert("Número máximo de bolas é 10 e valor minimo de aposta é R$: 1,00.");
     }
 }
 
@@ -385,8 +385,8 @@ function sorteiaBolas() {
         listaOrdenada[p] = tmp;
     }
 
-    //preenche com os primeiros 20 numeros embaralhados
-    for(var l = 0; l < 20; l++) {
+    //preenche com os primeiros 13 numeros embaralhados
+    for(var l = 0; l < 13; l++) {
         listaNumerosSorteados[l] = listaOrdenada[l];
     }
     return listaNumerosSorteados;
