@@ -73,11 +73,16 @@ Clearfix (clear floats)
   display: table;
 }  */
 .footer {
-   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color: #B8000C;
    color: white;
    text-align: center;
+}
+.container{
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(2, 100px);  
 }
