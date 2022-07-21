@@ -33,6 +33,27 @@ body {
   display: none;
 }
 
+.textoCarteira {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  margin-top: 9px;
+  margin-right: 10px;
+  /* text-decoration: none; */
+  font-size: 15px;
+  background-color: #570000;
+  border-radius: 40px;
+}
+
+.valorCarteira{
+  font-weight: 600;
+}
+
+
+
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
