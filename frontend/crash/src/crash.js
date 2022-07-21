@@ -13,7 +13,8 @@ var arrayEstatisticas = [
   menorRandom(),
   menorRandom(),
 ];
-let percentualAtual = 1.0;
+var percentualAtual = 1.0;
+var valorGanhoAtual = 0.0;
 
 //Esta função permite controlar a animação
 function controle() {
@@ -26,8 +27,9 @@ function controle() {
     //Adiciona a animação
     grafico.classList.add('animate');
 
+    percentualAtual = 1.00;
     var valorSorteado = menorRandom();
-    var valorGanhoAtual = 0.0;
+    valorGanhoAtual = 0.0;
 
     //Aumenta a porcentagem um por um
     var currTimeout = setInterval(function () {
@@ -125,27 +127,27 @@ function reniciar() {
   document.getElementById('tempoDeProgresso').innerHTML = '6.00';
   document.getElementById('progresso').style.display = 'none';
   document.getElementById('botoes').innerHTML =
-    '<button type="submit" class="botao" id="botaoJogar" onclick="controle();">Jogar</button>';
+    '<button type="submit" class="botao" id="botaoJogar" onclick="controle(), removerBalanco();">Jogar</button>';
   document.getElementById('botaoJogar').disabled = false;
 }
 
 //Para no valor que o usuario deseja
 function stop() {
-  valorGanhoAtual = document.getElementById('entrada').value * percentualAtual;
+  // valorGanhoAtual = document.getElementById('entrada').value * percentualAtual;
   parar = true;
   fetch('http://localhost:3000/adicionarBalanco', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      saldo: Number(valorGanhoAtual.toFixed(2)),
-    }),
-  });
-  pegarBalanco();
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        saldo: Number(valorGanhoAtual.toFixed(2)),
+      }),
+    });
+    pegarBalanco();
   document.getElementById('botoes').innerHTML =
     '<button type="submit" class="botao" id="botaoRetirar" onclick="stop();">Retirar&nbsp<div class="valorGanho" id="valorGanho"> 0.00</div></button> ';
-  document.getElementById('botaoRetirar').disabled = true;
+    document.getElementById('botaoRetirar').disabled = true;
 }
 
 //Atualiza o array de valores que foram sorteados anteriormente

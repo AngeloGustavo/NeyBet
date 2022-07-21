@@ -10,17 +10,18 @@ h3 {
 p {
   color: white;
 }
-/* * {
+ /* {
   box-sizing: border-box;
-}
+} */
 #painelDeJogos{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  align-content: center; */
+  margin-top: 50px;
 
-} */
+}
 .logoJogo{
   width: auto;
 }
