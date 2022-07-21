@@ -23,10 +23,11 @@ p {
 } */
 .logoJogo{
   width: auto;
-
 }
 
+
 .row{
+  margin-top: 35px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,4 +88,171 @@ Clearfix (clear floats)
   grid-gap: 5px;  
   grid-template-columns: repeat(auto-fit, 100px);
   grid-template-rows: repeat(2, 100px);  
+}
+
+
+/*inicio da responsividade*/
+
+@media screen and (min-width: 780px) and (max-width: 980px) {
+
+  .painelJogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .row {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .column1, .column2, .column3 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 780px) {
+
+
+  .painelJogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .row {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .column1, .column2, .column3 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 580px) {
+
+
+  .painelJogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .row {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .column1, .column2, .column3 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 479px) {
+
+  .painelJogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .column1, .column2, .column3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 330px) and (max-width: 478px) {
+
+  .painelJogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .row {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .column1, .column2, .column3 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
 }
