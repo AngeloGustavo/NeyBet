@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../crash/crash.css">
+
+	<title>Roleta</title>
+</head>
+<body onload="pegarBalanco()">
+
+<script src="../js/navbarUpDir.js"></script>
+<div class="linha">   
+<div class="coluna1"> 
+    <canvas id="canvas" width="500" height="500"></canvas>
+</div>
+<div class="coluna2">
+    <input type="number" placeholder="R$" class="entrada" name="name" id="entrada" required="required">
+    
+    <div class="radio-toolbar">
+        <input type="radio"  placeholder="10x" id="radioBranco" name="cor" value="Branco" class="botoes" checked>
+        <label for="radioBranco" style="background-color: white; color:black;">10x</label>
+
+        <input type="radio" id="radioVermelho" name="cor" value="Vermelho" class="botoes">
+        <label for="radioVermelho">2x</label>
+
+        <input type="radio" id="radioPreto" name="cor" value="Preto" class="botoes">
+        <label for="radioPreto"  style="background-color: black;">2x</label> 
+    </div>
+
+    
+    <div class="botoes" id="botoes"><input value="Apostar" class="botao" style="float:left;" id='spin' class="submit" type="submit" name="submit" onclick="removerBalanco();"/></div>
+</div>
+</div>
+
+<script src="roleta.js"></script>
+
+<!-- <div class="footer">
+    <p>NeyBet, sua casa de apostas!</p>
+</div> -->
+<script src="../js/main.js"></script>
+</body>
+</html>

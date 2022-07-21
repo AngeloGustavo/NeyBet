@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="utf-8"
+    />
+    <script src="./src/crash.js"></script>
+    <link href="crash.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <title>Crash</title>
+  </head>
+
+  <body onload="pegarBalanco()">
+    <script src="../js/navbarUpDir.js"></script>
+
+    <div class="linha">
+      <div class="coluna1">
+        <div class="areaGrafico">
+          <div class="planoDeFundoProgresso" id="planoDeFundoProgresso">
+            <div class="textoDeProgresso">
+              Começando em&nbsp;
+              <div class="tempoDeProgresso" id="tempoDeProgresso">6.00</div>
+            </div>
+            <div class="progresso" id="progresso"></div>
+          </div>
+          <div class="grafico" id="grafico"></div>
+          <div class="centroDoGrafico">
+            <div class="planoDeFundoRetirada" id="planoDeFundoRetirada">
+              <div class="multiplicador" id="multiplicador">X1.00</div>
+              <div class="textoValorGanho" id="textoValorGanho">
+                Você ganhou R$&nbsp;
+                <div class="valorGanho" id="valorGanhoFinal">0.00</div>
+              </div>
+            </div>
+            <div class="valorPercentual" id="valorPercentual">1.00X</div>
+            <div class="crashed" id="crashed">CRASHED</div>
+          </div>
+        </div>
+
+        <div class="anterior">ANTERIOR</div>
+        <div class="areaEstatisticas">
+          <div class="areaEstatisticas1">
+            <div class="estatistica" id="n0"></div>
+            <div class="estatistica" id="n1"></div>
+          </div>
+          <div class="areaEstatisticas2">
+            <div class="estatistica" id="n2"></div>
+            <div class="estatistica" id="n3"></div>
+          </div>
+          <div class="areaEstatisticas3">
+            <div class="estatistica" id="n4"></div>
+            <div class="estatistica" id="n5"></div>
+          </div>
+          <div class="areaEstatisticas4">
+            <div class="estatistica" id="n6"></div>
+            <div class="estatistica" id="n7"></div>
+          </div>
+          <div class="areaEstatisticas5">
+            <div class="estatistica" id="n8"></div>
+            <div class="estatistica" id="n9"></div>
+          </div>
+          <div class="areaEstatisticas6">
+            <div class="estatistica" id="n10"></div>
+            <div class="estatistica" id="n11"></div>
+          </div>
+
+          <script>
+            preencherEstatisticas();
+          </script>
+        </div>
+      </div>
+
+      <div class="coluna2">
+        <form name="meuForm" method="POST">
+          <input
+            class="entrada"
+            id="entrada"
+            type="number"
+            placeholder="R$"
+            min="0.01"
+            max="10000.00"
+            step="0.01"
+            required
+          />
+          <div class="botoes" id="botoes">
+            <button
+              type="submit"
+              class="botao"
+              id="botaoJogar"
+              onclick="controle(), removerBalanco();"
+            >
+              Jogar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="footer">
+    <p>NeyBet, sua casa de apostas!</p>
+  </div> -->
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
